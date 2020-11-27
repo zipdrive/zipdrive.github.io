@@ -1,0 +1,99 @@
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+    
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+body {
+    background-color: hsl(140, 0%, 98%);
+    
+    color: rgb(14, 27, 69);
+    font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    
+    background-image: linear-gradient(rgb(138, 255, 208), rgb(168, 211, 255));
+}
+
+.sidebar > .links {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    bottom: 100%;
+    
+    border: 0px solid black;
+    border-collapse: collapse;
+}
+
+.sidebar > .links td {
+    padding: 10px;
+    
+    text-align: center;
+}
+
+.sidebar > .links a {
+    color: white;
+    font-size: 1.5em;
+    
+    text-decoration: none;
+    text-shadow: 2px 2px 2px rgba(168, 211, 255, 128);
+}
+
+.sidebar > .links a:hover {
+    transition-duration: 0.4s;
+    
+    text-shadow: 2px 2px 2px rgba(138, 197, 255, 128);
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 80px;
+    left: 250px;
+    right: 0px;
+    
+    background-color: white;
+}
+
+.footer > .links {
+    margin: auto;
+}
+
+.footer > .links td {
+    padding: 25px;
+}
+
+.footer > .links a {
+    color: rgb(140, 198, 255);
+    font-size: 1.5em;
+    
+    text-decoration: none;
+}
+
+
+.content {
+    position: absolute;
+    left: 250px;
+    right: 0px;
+    top: 0px;
+    
+    padding: 40px 80px 120px;
+}
+
+h1 {
+    font-size: 4vw;
+}
