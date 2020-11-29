@@ -5,8 +5,20 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <filter id="colorize-blue">
+                    <feColorMatrix in="SourceGraphic"
+                        type="matrix"
+                        values="0.6588 0 0 0 0
+                                0 0.8275 0 0 0
+                                0 0 1 0 0
+                                0 0 0 1 0" />
+                </filter>
+            </defs>
+        </svg>
     
-        <div class="sidebar">
+        <aside>
             <table class="links">
                 <tr>
                     <td>
@@ -24,62 +36,73 @@
                     </td>
                 </tr>
             </table>
-        </div>
+        </aside>
         
         <div class="content">
-            <h1>my portfolio</h1>
-        
-            <h2><a name="about">who am i?</a></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien. Dictum at tempor commodo ullamcorper a lacus vestibulum. Duis convallis convallis tellus id interdum velit laoreet id donec. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Amet nisl purus in mollis nunc sed id semper risus. Pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada. Varius sit amet mattis vulputate enim nulla. Facilisis gravida neque convallis a. Diam quis enim lobortis scelerisque fermentum dui faucibus in. Donec enim diam vulputate ut pharetra sit amet. Id donec ultrices tincidunt arcu non sodales. Nec sagittis aliquam malesuada bibendum. Dictumst quisque sagittis purus sit amet volutpat. Tincidunt augue interdum velit euismod in pellentesque massa placerat duis.</p>
-
-            <p>
-Augue lacus viverra vitae congue eu consequat ac felis. Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. Amet cursus sit amet dictum. Sed risus ultricies tristique nulla aliquet enim tortor. Quis hendrerit dolor magna eget est lorem. Sit amet tellus cras adipiscing enim eu turpis. Morbi tincidunt augue interdum velit euismod in. Eget nulla facilisi etiam dignissim. Blandit turpis cursus in hac habitasse platea dictumst. Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh tortor id aliquet lectus proin. Sed felis eget velit aliquet sagittis id consectetur purus. Interdum posuere lorem ipsum dolor. Ornare aenean euismod elementum nisi. Egestas fringilla phasellus faucibus scelerisque eleifend donec. Tincidunt eget nullam non nisi est sit amet facilisis. Bibendum est ultricies integer quis auctor elit sed vulputate. A cras semper auctor neque vitae tempus quam.
-</p>
-
-<p>
-Id eu nisl nunc mi. Id eu nisl nunc mi ipsum faucibus vitae aliquet nec. Neque aliquam vestibulum morbi blandit cursus risus at ultrices. In nibh mauris cursus mattis molestie. Ipsum a arcu cursus vitae congue mauris rhoncus. Sed id semper risus in hendrerit. Urna id volutpat lacus laoreet. Consectetur lorem donec massa sapien faucibus et. Felis imperdiet proin fermentum leo vel. Aliquam etiam erat velit scelerisque in dictum non consectetur. Egestas sed sed risus pretium.
-</p>
-
-<p>
-Pellentesque sit amet porttitor eget dolor morbi non arcu. Ornare arcu dui vivamus arcu felis. Non enim praesent elementum facilisis leo vel fringilla est. Mauris pharetra et ultrices neque ornare aenean euismod elementum nisi. Non odio euismod lacinia at quis risus sed vulputate. Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed felis eget velit aliquet sagittis id. Adipiscing enim eu turpis egestas pretium. Neque volutpat ac tincidunt vitae semper quis lectus nulla. Tellus id interdum velit laoreet id donec ultrices tincidunt. Enim nec dui nunc mattis enim ut tellus elementum sagittis. Sit amet facilisis magna etiam tempor orci eu lobortis elementum. Ut etiam sit amet nisl purus.
-</p>
-
-<p>
-Sed tempus urna et pharetra. Leo a diam sollicitudin tempor id eu nisl. Arcu ac tortor dignissim convallis. Neque sodales ut etiam sit amet nisl. Risus nec feugiat in fermentum posuere urna nec tincidunt praesent. Aenean pharetra magna ac placerat vestibulum lectus. Dui accumsan sit amet nulla facilisi. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Iaculis nunc sed augue lacus. Aliquam etiam erat velit scelerisque in dictum non. Lectus arcu bibendum at varius vel pharetra vel turpis nunc. Risus nullam eget felis eget nunc. Est ultricies integer quis auctor elit. Eu scelerisque felis imperdiet proin fermentum leo vel orci porta.</p>
-
-            <h2><a name="portfolio">what have i worked on?</a></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien. Dictum at tempor commodo ullamcorper a lacus vestibulum. Duis convallis convallis tellus id interdum velit laoreet id donec. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Amet nisl purus in mollis nunc sed id semper risus. Pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada. Varius sit amet mattis vulputate enim nulla. Facilisis gravida neque convallis a. Diam quis enim lobortis scelerisque fermentum dui faucibus in. Donec enim diam vulputate ut pharetra sit amet. Id donec ultrices tincidunt arcu non sodales. Nec sagittis aliquam malesuada bibendum. Dictumst quisque sagittis purus sit amet volutpat. Tincidunt augue interdum velit euismod in pellentesque massa placerat duis.</p>
-
-            <p>
-Augue lacus viverra vitae congue eu consequat ac felis. Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. Amet cursus sit amet dictum. Sed risus ultricies tristique nulla aliquet enim tortor. Quis hendrerit dolor magna eget est lorem. Sit amet tellus cras adipiscing enim eu turpis. Morbi tincidunt augue interdum velit euismod in. Eget nulla facilisi etiam dignissim. Blandit turpis cursus in hac habitasse platea dictumst. Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh tortor id aliquet lectus proin. Sed felis eget velit aliquet sagittis id consectetur purus. Interdum posuere lorem ipsum dolor. Ornare aenean euismod elementum nisi. Egestas fringilla phasellus faucibus scelerisque eleifend donec. Tincidunt eget nullam non nisi est sit amet facilisis. Bibendum est ultricies integer quis auctor elit sed vulputate. A cras semper auctor neque vitae tempus quam.
-</p>
-
-<p>
-Id eu nisl nunc mi. Id eu nisl nunc mi ipsum faucibus vitae aliquet nec. Neque aliquam vestibulum morbi blandit cursus risus at ultrices. In nibh mauris cursus mattis molestie. Ipsum a arcu cursus vitae congue mauris rhoncus. Sed id semper risus in hendrerit. Urna id volutpat lacus laoreet. Consectetur lorem donec massa sapien faucibus et. Felis imperdiet proin fermentum leo vel. Aliquam etiam erat velit scelerisque in dictum non consectetur. Egestas sed sed risus pretium.
-</p>
-
-<p>
-Pellentesque sit amet porttitor eget dolor morbi non arcu. Ornare arcu dui vivamus arcu felis. Non enim praesent elementum facilisis leo vel fringilla est. Mauris pharetra et ultrices neque ornare aenean euismod elementum nisi. Non odio euismod lacinia at quis risus sed vulputate. Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed felis eget velit aliquet sagittis id. Adipiscing enim eu turpis egestas pretium. Neque volutpat ac tincidunt vitae semper quis lectus nulla. Tellus id interdum velit laoreet id donec ultrices tincidunt. Enim nec dui nunc mattis enim ut tellus elementum sagittis. Sit amet facilisis magna etiam tempor orci eu lobortis elementum. Ut etiam sit amet nisl purus.
-</p>
-
-<p>
-Sed tempus urna et pharetra. Leo a diam sollicitudin tempor id eu nisl. Arcu ac tortor dignissim convallis. Neque sodales ut etiam sit amet nisl. Risus nec feugiat in fermentum posuere urna nec tincidunt praesent. Aenean pharetra magna ac placerat vestibulum lectus. Dui accumsan sit amet nulla facilisi. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Iaculis nunc sed augue lacus. Aliquam etiam erat velit scelerisque in dictum non. Lectus arcu bibendum at varius vel pharetra vel turpis nunc. Risus nullam eget felis eget nunc. Est ultricies integer quis auctor elit. Eu scelerisque felis imperdiet proin fermentum leo vel orci porta.</p>
-
-            <h2><a name="contact">how can you get in contact with me?</a></h2>
+            <section class="about">
+                <a name="about" />
+                
+                <h1>my portfolio</h1>
+                <p>a generalist programmer, with experience in web design and game programming</p>
+            </section>
+            
+            <section class="portfolio">
+                <a name="portfolio" />
+                
+                <h1>portfolio</h1>
+                
+                <div class="items">
+                    
+                </div>
+                
+                <table>
+                    <tr>
+                        <td>
+                            <div class="item">
+                                <h1>this website</h1>
+                                <p>year: 2020</p>
+                                <p>languages: html, css, jquery</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="item">
+                                <h1>onion library</h1>
+                                <img src="files/screenshot_onion.gif" alt="screenshot_onion.gif">
+                                <p class="desc">i was the sole developer for an open-source game engine for 2.5d pixel art games, built from scratch using opengl.</p>
+                                
+                                <table>
+                                    <tr>
+                                        <td><p>year:</p></td>
+                                        <td><p>2020</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>experience:</p></td>
+                                        <td><p>c++, opengl</p></td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td><p>demo <a href="files/onion-demo-winx86.zip" download>windows x86</a></p></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            
+            <section class="contact">
+                <a name="contact" />
+            </section>
         </div>
         
-        <div class="footer">
-            <table class="links">
-                <tr>
-                    <td>
-                        <a href="https://twitter.com/avieiry">twitter</a>
-                    </td>
-                    <td>
-                        <a href="https://github.com/zipdrive/">github</a>
-                    </td>
-                </tr>
-            </table>
-        </div>
+        <footer>
+                <div class="link">
+                    <a href="https://twitter.com/avieiry"><img src="files/icon_twitter.png"></a>
+                </div>
+                <div class="link">
+                    <a href="https://github.com/zipdrive/"><img src="files/icon_github.png"></a>
+                </div>
+        </footer>
     
     </body>
 </html>
