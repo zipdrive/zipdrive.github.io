@@ -12,7 +12,7 @@ html {
 
 @media screen and (min-width: 900px) {
     
-    aside {
+    nav {
         position: fixed;
         left: 0;
         top: 0;
@@ -41,7 +41,11 @@ html {
     
     @media screen and (min-width: 1250px) {
         
-        aside {
+        body {
+            font-size: 1.5vw;
+        }
+        
+        nav {
             width: 250px;
             font-size: 24px;
         }
@@ -58,7 +62,11 @@ html {
 
     @media screen and (max-width: 1249px) {
         
-        aside {
+        body {
+            font-size: 18.75px;
+        }
+        
+        nav {
             width: 20%;
             font-size: 1.96vw;
         }
@@ -72,11 +80,23 @@ html {
         }
         
     }
+    
+    @media screen and (max-width: 956px) {
+        
+        nav {
+            font-size: 18.75px;
+        }
+        
+    }
 }
 
 @media screen and (max-width: 899px) {
     
-    aside {
+    body {
+        font-size: 18.75px;
+    }
+    
+    nav {
         display: none;
     }
     
@@ -104,11 +124,18 @@ html {
 
 
 h1 {
-    font-size: 4vw;
+    font-size: 3em;
+    line-height: 0%;
+}
+
+h2 {
+    font-size: 2em;
+    line-height: 0%;
 }
 
 p {
-    font-size: 1vw;
+    font-size: 1em;
+    line-height: 75%;
 }
 
 
@@ -120,7 +147,7 @@ body {
 }
 
 
-aside > .links {
+nav > .links {
     position: absolute;
     width: 100%;
     top: 50px;
@@ -130,20 +157,20 @@ aside > .links {
     border-collapse: collapse;
 }
 
-aside > .links td {
+nav > .links td {
     padding: 10px;
     
     text-align: center;
 }
 
-aside > .links a {
+nav > .links a {
     color: white;
     
     text-decoration: none;
     text-shadow: 2px 2px 2px rgba(168, 211, 255, 128);
 }
 
-aside > .links a:hover {
+nav > .links a:hover {
     transition-duration: 0.4s;
     
     text-shadow: 2px 2px 2px rgba(138, 197, 255, 128);
@@ -187,7 +214,7 @@ footer img {
 .about h1 {
     padding-top: 5%;
     
-    font-size: 4vw;
+    font-size: 4em;
 }
 
 .about p {
@@ -196,51 +223,55 @@ footer img {
     
     padding-right: 25%;
     
-    font-size: 1.5vw;
+    font-size: 1.5em;
     line-height: 120%;
 }
 
 
+/*
 .portfolio h1 {
     padding-top: 5%;
     
     text-align: center;
-    font-size: 3vw;
     line-height: 0%;
 }
+*/
 
 .portfolio .items {
     position: relative;
     width: 100%;
     
-    display: grid;
+    padding-top: 1%;
     
-}
-
-.portfolio table {
-    position: relative;
-    width: 100%;
-}
-
-.portfolio td {
-    width: 50%;
-    min-width: 300px;
-    height: 100%;
-    
-    padding: 0% 4% 7%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: flex-start;
 }
 
 .portfolio .item {
-    position: relative;
-    width: 80%;
+    box-sizing: border-box;
+    
+    /*
     
     border: 1px solid rgb(168, 211, 255);
     border-radius: 4px;
     
     background-color: rgb(246, 248, 250);
+    */
     
-    margin-top: 5%;
-    padding: 0% 10% 5%;
+    /*
+    margin-left: 10px;
+    margin-right: 10px;
+    */
+    margin-bottom: 30px;
+    
+    padding: 20px 2%;
+    
+    text-decoration: none;
+    color: inherit;
 }
 
 .portfolio .item:hover {
@@ -249,29 +280,69 @@ footer img {
     background-color: rgb(242, 246, 250);
 }
 
-.portfolio .item h1 {
-    padding: 0px;
-    
-    font-size: 2vw;
-    line-height: 100%;
-}
-
 .portfolio .item img {
     position: relative;
-    left: 10%;
-    width: 80%;
+    width: 100%;
+}
+
+.portfolio .item h2 {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    
+    font-size: 1.25em;
+    line-height: 0%;
 }
 
 .portfolio .item p {
+    padding-left: 2%;
+    padding-right: 5%;
+    
     line-height: 50%;
 }
 
 .portfolio .item .desc {
-    text-align: center;
     line-height: 120%;
 }
 
-.portfolio .item td {
-    margin: 0%;
-    padding: 0%;
+
+@media screen and (min-width: 1500px) {
+    
+    .portfolio .item {
+        position: relative;
+        max-width: 33%;
+        
+        font-size: 0.6em;
+    }
+    
+}
+
+@media screen and (max-width: 1499px) and (min-width: 1050px) {
+    
+    .portfolio .item {
+        max-width: 49%;
+        
+        font-size: 0.8em;
+    }
+    
+}
+
+@media screen and (max-width: 1049px) {
+    
+    .portfolio .item {
+        max-width: 100%;
+        
+        font-size: 0.85em;
+    }
+    
+}
+
+
+
+.contact h1 {
+    
+}
+
+.contact p {
+    position: relative;
+    left: 2%;
 }
