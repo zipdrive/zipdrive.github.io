@@ -3,6 +3,9 @@
     <head>
         <title>Portfolio</title>
         <link rel="stylesheet" href="style.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="script.js"></script>
     </head>
     <body>
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
@@ -10,8 +13,8 @@
                 <filter id="colorize-blue">
                     <feColorMatrix in="SourceGraphic"
                         type="matrix"
-                        values="0.6588 0 0 0 0
-                                0 0.8275 0 0 0
+                        values="0.5 0 0 0 0
+                                0 0.70196 0 0 0
                                 0 0 1 0 0
                                 0 0 0 1 0" />
                 </filter>
@@ -22,31 +25,31 @@
             <table class="links">
                 <tr>
                     <td>
-                        <a href="#about">about</a>
+                        <a class="scrolling" href="#about">about</a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="#portfolio">portfolio</a>
+                        <a class="scrolling" href="#portfolio">portfolio</a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="#contact">contact</a>
+                        <a class="scrolling" href="#contact">contact</a>
                     </td>
                 </tr>
             </table>
         </nav>
         
         <div class="content">
-            <!--
             <section class="about">
                 <a name="about" />
                 
-                <h1>my portfolio</h1>
+                <h1>avery phillips</h1>
                 <p>a generalist programmer, with experience in web design and game programming</p>
             </section>
-            -->
+            
+            <br />
             
             <section class="portfolio">
                 <a name="portfolio" />
@@ -54,55 +57,23 @@
                 <h1>portfolio</h1>
                 
                 <div class="items">
-                    <a class="item" href="#">
+                    <a class="item" onclick="showPortfolioDetails('#onion-details')">
                         <img src="files/screenshot_onion.gif">
                         <p class="desc"><strong>ONION LIBRARY</strong><br />An open-source C++ library developed as an engine for 2.5D games, which was programmed solo from scratch using OpenGL.</p>
                     </a>
-                    <a class="item" href="#">
+                    <a class="item" onclick="showPortfolioDetails('#zevrilboard-details')">
                         <img src="files/screenshot_zevrilboard.png">
                         <p class="desc"><strong>ZEVRILBOARD</strong><br />A website theme for Wordpress, designed as a way for Wordpress sites to mimic Wikipedia and other wikis.</p>
                     </a>
-                    <a class="item" href="#">
+                    <a class="item" onclick="showPortfolioDetails('#rgd-details')">
                         <img src="files/screenshot_rgd.png">
                         <p class="desc"><strong>ROBOTS, GODS, AND DAVE</strong><br />A prototype for a turn-based tactics RPG, developed solo in Unity.</p>
                     </a>
-                    <a class="item" href="#">
+                    <a class="item" onclick="showPortfolioDetails('#buzzik-details')">
                         <img src="files/screenshot_buzzik.png">
                         <p class="desc"><strong>BUZZIK</strong><br />Front-end programmer for a browser extension developed for the Georgia Tech College of Computing that can track and visualize students' music listening history over apps such as Spotify and Pandora.</p>
                     </a>
                 </div>
-                
-                <!--
-                <table>
-                    <tr>
-                        <td>
-                            
-                        </td>
-                        <td>
-                            <div class="item">
-                                <h1>onion library</h1>
-                                <img src="files/screenshot_onion.gif" alt="screenshot_onion.gif">
-                                <p class="desc">i was the sole developer for an open-source game engine for 2.5d pixel art games, built from scratch using opengl.</p>
-                                
-                                <table>
-                                    <tr>
-                                        <td><p>year:</p></td>
-                                        <td><p>2020</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p>experience:</p></td>
-                                        <td><p>c++, opengl</p></td>
-                                    </tr>
-                                
-                                    <tr>
-                                        <td><p>demo <a href="files/onion-demo-winx86.zip" download>windows x86</a></p></td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-                -->
             </section>
             
             <section class="contact">
@@ -112,6 +83,56 @@
                 <p>&#x2709; &nbsp;&nbsp; phillips4271@gmail.com</p>
                 <p>&#x260e; &nbsp;&nbsp; (404) 783-9204</p>
             </section>
+        </div>
+                
+        <div class="portfolio-details" id="portfolio-details">
+            <button id="onion-details" class="item" disabled>
+                <a class="close" onclick="hidePortfolioDetails('#onion-details')">&#128473;</a>
+                
+                <div class="item-details">
+                    <img class="item-image" src="files/screenshot_onion.gif">
+                    <h1 class="item-name">onion library</h1>
+                    <p class="item-description">This project was built from scratch in C++ using OpenGL, designed specifically for users of the engine to easily create their own 2.5D games. The engine comes complete with collision testing, highly customizable lighting, and the ability to load and use custom shaders. The demo below provides a simple example of the engine's capabilities, with a dithered light that flickers in intensity and a few walls for the player object to collide with.</p>
+                    <p class="item-footer">
+                        <a href="files/onion-demo-winx86.zip" download>demo</a> (windows x86)
+                        <br /><br />
+                        <a href="https://github.com/zipdrive/onion">github</a>
+                    </p>
+                </div>
+            </button>
+            <button id="zevrilboard-details" class="item" disabled>
+                <a class="close" onclick="hidePortfolioDetails('#zevrilboard-details')">&#128473;</a>
+                
+                <div class="item-details">
+                    <img class="item-image" src="files/screenshot_zevrilboard_full.png">
+                    <h1 class="item-name">zevrilboard</h1>
+                    <p class="item-description">This project was a Wordpress theme, developed using HTML, CSS, and PHP, designed to mimic the page layout of wikis. Features a high degree of customizability without needing to edit the code, such as editing the links and sections in the sidebar from the Wordpress dashboard.</p>
+                    <p class="item-footer"><a href="https://github.com/zipdrive/zevrilboard">github</a></p>
+                </div>
+            </button>
+            <button id="rgd-details" class="item" disabled>
+                <a class="close" onclick="hidePortfolioDetails('#rgd-details')">&#128473;</a>
+                
+                <div class="item-details">
+                    <img class="item-image" src="files/screenshot_rgd.png">
+                    <h1 class="item-name">robots, gods, and dave</h1>
+                    <p class="item-description">This prototype for a turn-based tactics RPG with a storybook-esque feeling was built from scratch in C# and Unity. The demo below shows off a simple cutscene and battle in the game.</p>
+                    <p class="item-footer">
+                        <a href="files/rgd-demo-winx86.zip" download>demo</a> (windows x86)
+                        <br /><br />
+                        <a href="https://github.com/zipdrive/tactics">github</a>
+                    </p>
+                </div>
+            </button>
+            <button id="buzzik-details" class="item" disabled>
+                <a class="close" onclick="hidePortfolioDetails('#buzzik-details')">&#128473;</a>
+                
+                <div class="item-details">
+                    <img class="item-image" src="files/screenshot_buzzik.png">
+                    <h1 class="item-name">buzzik</h1>
+                    <p class="item-description">This project, developed as part of a team on behalf of the Georgia Tech College of Computing, was a browser application made in HTML, CSS, and Javascript to track the listening habits of students through music streaming platforms such as Spotify and Pandora.</p>
+                </div>
+            </button>
         </div>
         
         <footer>

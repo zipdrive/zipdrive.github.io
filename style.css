@@ -4,6 +4,8 @@ html {
     
     -ms-overflow-style: none;
     scrollbar-width: none;
+    
+    scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -54,6 +56,10 @@ html {
             left: 250px;
         }
         
+        .portfolio-details {
+            left: 250px;
+        }
+        
         footer {
             left: 250px;
         }
@@ -72,6 +78,10 @@ html {
         }
         
         .content {
+            left: 20%;
+        }
+        
+        .portfolio-details {
             left: 20%;
         }
         
@@ -109,6 +119,10 @@ html {
         padding: 40px 80px 120px;
     }
     
+    .portfolio-details {
+        left: 0;
+    }
+    
     footer {
         position: fixed;
         bottom: 0;
@@ -136,6 +150,17 @@ h2 {
 p {
     font-size: 1em;
     line-height: 75%;
+}
+
+
+button {
+    border-width: 0px;
+    background-color: initial;
+    
+    font-family: inherit;
+    font-size: inherit;
+    text-align: inherit;
+    color: inherit;
 }
 
 
@@ -272,6 +297,8 @@ footer img {
     
     text-decoration: none;
     color: inherit;
+    
+    cursor: pointer;
 }
 
 .portfolio .item:hover {
@@ -334,6 +361,96 @@ footer img {
         font-size: 0.85em;
     }
     
+}
+
+
+
+.portfolio-details {
+    z-index: -1;
+    
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 80px;
+}
+
+.portfolio-details .item {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    
+    padding: 5% 80px 40px;
+    
+    background-color: hsl(140, 0%, 96%);
+}
+
+.portfolio-details .item:disabled {
+    z-index: -1;
+    opacity: 0;
+    
+    transition-duration: 0.5s;
+}
+
+.portfolio-details .item:enabled {
+    z-index: 0;
+    opacity: 1;
+    
+    transition-duration: 0.5s;
+}
+
+.portfolio-details .close {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    
+    font-family: sans-serif;
+    font-size: 2em;
+    color: rgb(240, 75, 60);
+    
+    text-decoration: none;
+    
+    cursor: pointer;
+}
+
+.portfolio-details .item-details {
+    width: 100%;
+    height: 100%;
+    
+    display: grid;
+    align-content: center;
+    grid-template-columns: 30% 70%;
+    grid-column-gap: 40px;
+    grid-template-areas: 
+        'item-image item-name'
+        'item-image item-description'
+        'item-footer item-footer';
+}
+
+.portfolio-details .item-image {
+    grid-area: item-image;
+    width: 100%;
+    margin: auto;
+}
+
+.portfolio-details .item-name {
+    grid-area: item-name;
+}
+
+.portfolio-details .item-description {
+    grid-area: item-description;
+    line-height: 120%;
+}
+
+.portfolio-details .item-footer {
+    grid-area: item-footer;
+    text-align: center;
+}
+
+.portfolio-details a {
+    color: rgb(128, 179, 255);
+    text-decoration: none;
 }
 
 
